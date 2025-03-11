@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla de Evaluación de Casting</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+            width: calc(100% - 12px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .criterio {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planilla de Evaluación de Casting</h1>
+    <form id="evaluacionForm">
+        <section>
+            <h2>Datos del Candidato</h2>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo">
+
+            <label for="experiencia">Experiencia previa:</label>
+            <textarea id="experiencia" name="experiencia"></textarea>
+
+            <label for="rol">Rol para el que está audicionando:</label>
+            <input type="text" id="rol" name="rol" required>
+        </section>
+
+        <section>
+            <h2>Criterios de Evaluación</h2>
+            <div class="criterio">
+                <h3>Apariencia y Presencia Escénica</h3>
+                <p>¿El candidato tiene una presencia adecuada para el rol?</p>
+                <label><input type="radio" name="apariencia" value="1"> 1</label>
+                <label><input type="radio" name="apariencia" value="2"> 2</label>
+                <label><input type="radio" name="apariencia" value="3"> 3</label>
+                <label><input type="radio" name="apariencia" value="4"> 4</label>
+                <label><input type="radio" name="apariencia" value="5"> 5</label>
+                <label for="comentariosApariencia">Comentarios:</label>
+                <textarea id="comentariosApariencia" name="comentariosApariencia"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Actuación</h3>
+                <p>¿El candidato muestra habilidades de actuación?</p>
+                <label><input type="radio" name="actuacionHabilidades" value="1"> 1</label>
+                <label><input type="radio" name="actuacionHabilidades" value="2"> 2</label>
+                <label><input type="radio" name="actuacionHabilidades" value="3"> 3</label>
+                <label><input type="radio" name="actuacionHabilidades" value="4"> 4</label>
+                <label><input type="radio" name="actuacionHabilidades" value="5"> 5</label>
+                <label for="comentariosActuacionHabilidades">Comentarios:</label>
+                <textarea id="comentariosActuacionHabilidades" name="comentariosActuacionHabilidades"></textarea>
+
+                <p>¿Es capaz de transmitir emociones y conectar con el público?</p>
+                <label><input type="radio" name="actuacionEmociones" value="1"> 1</label>
+                <label><input type="radio" name="actuacionEmociones" value="2"> 2</label>
+                <label><input type="radio" name="actuacionEmociones" value="3"> 3</label>
+                <label><input type="radio" name="actuacionEmociones" value="4"> 4</label>
+                <label><input type="radio" name="actuacionEmociones" value="5"> 5</label>
+                <label for="comentariosActuacionEmociones">Comentarios:</label>
+                <textarea id="comentariosActuacionEmociones" name="comentariosActuacionEmociones"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Interpretación del Guion</h3>
+                <p>¿Cómo interpreta el texto?</p>
+                <label><input type="radio" name="interpretacionGuion" value="1"> 1</label>
+                <label><input type="radio" name="interpretacionGuion" value="2"> 2</label>
+                <label><input type="radio" name="interpretacionGuion" value="3"> 3</label>
+                <label><input type="radio" name="interpretacionGuion" value="4"> 4</label>
+                <label><input type="radio" name="interpretacionGuion" value="5"> 5</label>
+                <label for="comentariosInterpretacionGuion">Comentarios:</label>
+                <textarea id="comentariosInterpretacionGuion" name="comentariosInterpretacionGuion"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Versatilidad</h3>
+                <p>¿Puede adaptarse a diferentes situaciones?</p>
+                <label><input type="radio" name="versatilidadSituaciones" value="1"> 1</label>
+                <label><input type="radio" name="versatilidadSituaciones" value="2"> 2</label>
+                <label><input type="radio" name="versatilidadSituaciones" value="3"> 3</label>
+                <label><input type="radio" name="versatilidadSituaciones" value="4"> 4</label>
+                <label><input type="radio" name="versatilidadSituaciones" value="5"> 5</label>
+                <label for="comentariosVersatilidadSituaciones">Comentarios:</label>
+                <textarea id="comentariosVersatilidadSituaciones" name="comentariosVersatilidadSituaciones"></textarea>
+
+                <p>¿Es capaz de improvisar si es necesario?</p>
+                <label><input type="radio" name="versatilidadImprovisacion" value="1"> 1</label>
+                <label><input type="radio" name="versatilidadImprovisacion" value="2"> 2</label>
+                <label><input type="radio" name="versatilidadImprovisacion" value="3"> 3</label>
+                <label><input type="radio" name="versatilidadImprovisacion" value="4"> 4</label>
+                <label><input type="radio" name="versatilidadImprovisacion" value="5"> 5</label>
+                <label for="comentariosVersatilidadImprovisacion">Comentarios:</label>
+                <textarea id="comentariosVersatilidadImprovisacion" name="comentariosVersatilidadImprovisacion"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Comunicación</h3>
+                <p>¿Se expresa claramente?</p>
+                <label><input type="radio" name="comunicacionClara" value="1"> 1</label>
+                <label><input type="radio" name="comunicacionClara" value="2"> 2</label>
+                <label><input type="radio" name="comunicacionClara" value="3"> 3</label>
+                <label><input type="radio" name="comunicacionClara" value="4"> 4</label>
+                <label><input type="radio" name="comunicacionClara" value="5"> 5</label>
+                <label for="comentariosComunicacionClara">Comentarios:</label>
+                <textarea id="comentariosComunicacionClara" name="comentariosComunicacionClara"></textarea>
+
+                 <p>¿Muestra buena dicción y proyección de voz?</p>
+                <label><input type="radio" name="comunicacionDiccion" value="1"> 1</label>
+                <label><input type="radio" name="comunicacionDiccion" value="2"> 2</label>
+                <label><input type="radio" name="comunicacionDiccion" value="3"> 3</label>
+                <label><input type="radio" name="comunicacionDiccion" value="4"> 4</label>
+                <label><input type="radio" name="comunicacionDiccion" value="5"> 5</label>
+                <label for="comentariosComunicacionDiccion">Comentarios:</label>
+                <textarea id="comentariosComunicacionDiccion" name="comentariosComunicacionDiccion"></textarea>
+
+<label for="comentariosComunicacionDiccion">Comentarios:</label>
+                <textarea id="comentariosComunicacionDiccion" name="comentariosComunicacionDiccion"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Actitud y Profesionalismo</h3>
+                <p>¿Es puntual y respetuoso durante el casting?</p>
+                <label><input type="radio" name="actitudPuntualidad" value="1"> 1</label>
+                <label><input type="radio" name="actitudPuntualidad" value="2"> 2</label>
+                <label><input type="radio" name="actitudPuntualidad" value="3"> 3</label>
+                <label><input type="radio" name="actitudPuntualidad" value="4"> 4</label>
+                <label><input type="radio" name="actitudPuntualidad" value="5"> 5</label>
+                <label for="comentariosActitudPuntualidad">Comentarios:</label>
+                <textarea id="comentariosActitudPuntualidad" name="comentariosActitudPuntualidad"></textarea>
+
+                <p>¿Muestra disposición para recibir feedback?</p>
+                <label><input type="radio" name="actitudFeedback" value="1"> 1</label>
+                <label><input type="radio" name="actitudFeedback" value="2"> 2</label>
+                <label><input type="radio" name="actitudFeedback" value="3"> 3</label>
+                <label><input type="radio" name="actitudFeedback" value="4"> 4</label>
+                <label><input type="radio" name="actitudFeedback" value="5"> 5</label>
+                <label for="comentariosActitudFeedback">Comentarios:</label>
+                <textarea id="comentariosActitudFeedback" name="comentariosActitudFeedback"></textarea>
+            </div>
+
+            <div class="criterio">
+                <h3>Trabajo en Equipo</h3>
+                <p>¿Cómo interactúa con otros candidatos o el equipo de producción?</p>
+                <label><input type="radio" name="trabajoInteraccion" value="1"> 1</label>
+                <label><input type="radio" name="trabajoInteraccion" value="2"> 2</label>
+                <label><input type="radio" name="trabajoInteraccion" value="3"> 3</label>
+                <label><input type="radio" name="trabajoInteraccion" value="4"> 4</label>
+                <label><input type="radio" name="trabajoInteraccion" value="5"> 5</label>
+                <label for="comentariosTrabajoInteraccion">Comentarios:</label>
+                <textarea id="comentariosTrabajoInteraccion" name="comentariosTrabajoInteraccion"></textarea>
+
+                <p>¿Es colaborativo y abierto a trabajar en grupo?</p>
+                <label><input type="radio" name="trabajoColaboracion" value="1"> 1</label>
+                <label><input type="radio" name="trabajoColaboracion" value="2"> 2</label>
+                <label><input type="radio" name="trabajoColaboracion" value="3"> 3</label>
+                <label><input type="radio" name="trabajoColaboracion" value="4"> 4</label>
+                <label><input type="radio" name="trabajoColaboracion" value="5"> 5</label>
+                <label for="comentariosTrabajoColaboracion">Comentarios:</label>
+                <textarea id="comentariosTrabajoColaboracion" name="comentariosTrabajoColaboracion"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <h2>Comentarios Generales</h2>
+            <label for="comentariosGenerales">Observaciones:</label>
+            <textarea id="comentariosGenerales" name="comentariosGenerales"></textarea>
+
+            <label for="sugerencias">Sugerencias:</label>
+            <textarea id="sugerencias" name="sugerencias"></textarea>
+        </section>
+
+        <section>
+            <h2>Recomendaciones</h2>
+            <label for="recomendacion">¿Se recomienda al candidato para el rol?</label>
+            <select id="recomendacion" name="recomendacion">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+                <option value="talvez">Tal vez</option>
+            </select>
+
+            <label for="justificacion">Justificación:</label>
+            <textarea id="justificacion" name="justificacion"></textarea>
+        </section>
+
+        <section>
+            <h2>Evaluador</h2>
+            <label for="nombreEvaluador">Nombre:</label>
+            <input type="text" id="nombreEvaluador" name="nombreEvaluador" required>
+
+            <label for="rolEvaluador">Posición o rol:</label>
+            <input type="text" id="rolEvaluador" name="rolEvaluador" required>
+        </section>
+
+        <button type="submit">Enviar Evaluación</button>
+<h1>Planilla de Evaluación de Casting</h1>
+        <form id="evaluacionForm">
+            <button type="submit">Guardar Evaluación</button>
+        </form>
+
+        <h2>Evaluaciones Guardadas</h2>
+        <div id="evaluacionesGuardadas"></div>
+
+        <script>
+            document.getElementById('evaluacionForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Recopilar datos del formulario
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => data[key] = value);
+
+                // Guardar evaluación en LocalStorage
+                let evaluaciones = JSON.parse(localStorage.getItem('evaluaciones')) || [];
+                evaluaciones.push(data);
+                localStorage.setItem('evaluaciones', JSON.stringify(evaluaciones));
+
+                alert('Evaluación guardada localmente');
+                this.reset(); // Limpiar el formulario
+                mostrarEvaluaciones(); // Actualizar la lista de evaluaciones
+            });
+
+            // Función para mostrar las evaluaciones guardadas
+            function mostrarEvaluaciones() {
+                let evaluaciones = JSON.parse(localStorage.getItem('evaluaciones')) || [];
+                const evaluacionesDiv = document.getElementById('evaluacionesGuardadas');
+                evaluacionesDiv.innerHTML = ''; // Limpiar el contenedor
+
+                if (evaluaciones.length === 0) {
+                    evaluacionesDiv.innerHTML = '<p>No hay evaluaciones guardadas.</p>';
+                    return;
+                }
+
+                evaluaciones.forEach((evaluacion, index) => {
+                    const evaluacionDiv = document.createElement('div');
+                    evaluacionDiv.innerHTML = `
+                        <h3>Evaluación ${index + 1}</h3>
+                        <p>Nombre: ${evaluacion.nombre}</p>
+                        <p>Edad: ${evaluacion.edad}</p>
+                        <p>Rol: ${evaluacion.rol}</p>
+                        <hr>
+                    `;
+                    evaluacionesDiv.appendChild(evaluacionDiv);
+                });
+            }
+
+            // Mostrar evaluaciones al cargar la página
+            mostrarEvaluaciones();
+ function mostrarEvaluaciones() {
+        let evaluaciones = JSON.parse(localStorage.getItem('evaluaciones')) || [];
+        const evaluacionesDiv = document.getElementById('evaluacionesGuardadas');
+        evaluacionesDiv.innerHTML = ''; // Limpiar el contenedor
+
+        if (evaluaciones.length === 0) {
+            evaluacionesDiv.innerHTML = '<p>No hay evaluaciones guardadas.</p>';
+            return;
+        }
+
+        evaluaciones.forEach((evaluacion, index) => {
+            const evaluacionDiv = document.createElement('div');
+            evaluacionDiv.innerHTML = `
+                <h3>Evaluación ${index + 1}</h3>
+                <p><strong>Nombre:</strong> ${evaluacion.nombre}</p>
+                <p><strong>Edad:</strong> ${evaluacion.edad}</p>
+                <p><strong>Teléfono:</strong> ${evaluacion.telefono || 'No especificado'}</p>
+                <p><strong>Correo:</strong> ${evaluacion.correo || 'No especificado'}</p>
+                <p><strong>Experiencia:</strong> ${evaluacion.experiencia || 'No especificada'}</p>
+                <p><strong>Rol:</strong> ${evaluacion.rol}</p>
+                <p><strong>Apariencia:</strong> ${evaluacion.apariencia || 'No calificado'}</p>
+                <p><strong>Comentarios Apariencia:</strong> ${evaluacion.comentariosApariencia || 'Ninguno'}</p>
+                <p><strong>Actuación Habilidades:</strong> ${evaluacion.actuacionHabilidades || 'No calificado'}</p>
+                <p><strong>Comentarios Actuación Habilidades:</strong> ${evaluacion.comentariosActuacionHabilidades || 'Ninguno'}</p>
+                <p><strong>Actuación Emociones:</strong> ${evaluacion.actuacionEmociones || 'No calificado'}</p>
+                <p><strong>Comentarios Actuación Emociones:</strong> ${evaluacion.comentariosActuacionEmociones || 'Ninguno'}</p>
+                <p><strong>Interpretación Guion:</strong> ${evaluacion.interpretacionGuion || 'No calificado'}</p>
+                <p><strong>Comentarios Interpretación Guion:</strong> ${evaluacion.comentariosInterpretacionGuion || 'Ninguno'}</p>
+                <p><strong>Versatilidad Situaciones:</strong> ${evaluacion.versatilidadSituaciones || 'No calificado'}</p>
+                <p><strong>Comentarios Versatilidad Situaciones:</strong> ${evaluacion.comentariosVersatilidadSituaciones || 'Ninguno'}</p>
+                <p><strong>Versatilidad Improvisación:</strong> ${evaluacion.versatilidadImprovisacion || 'No calificado'}</p>
+                <p><strong>Comentarios Versatilidad Improvisación:</strong> ${evaluacion.comentariosVersatilidadImprovisacion || 'Ninguno'}</p>
+                <p><strong>Comunicación Clara:</strong> ${evaluacion.comunicacionClara || 'No calificado'}</p>
+                <p><strong>Comentarios Comunicación Clara:</strong> ${evaluacion.comentariosComunicacionClara || 'Ninguno'}</p>
+                <p><strong>Comunicación Dicción:</strong> ${evaluacion.comunicacionDiccion || 'No calificado'}</p>
+                <p><strong>Comentarios Comunicación Dicción:</strong> ${evaluacion.comentariosComunicacionDiccion || 'Ninguno'}</p>
+                <p><strong>Actitud Puntualidad:</strong> ${evaluacion.actitudPuntualidad || 'No calificado'}</p>
+                <p><strong>Comentarios Actitud Puntualidad:</strong> ${evaluacion.comentariosActitudPuntualidad || 'Ninguno'}</p>
+                <p><strong>Actitud Feedback:</strong> ${evaluacion.actitudFeedback || 'No calificado'}</p>
+                <p><strong>Comentarios Actitud Feedback:</strong> ${evaluacion.comentariosActitudFeedback || 'Ninguno'}</p>
+                <p><strong>Trabajo Interacción:</strong> ${evaluacion.trabajoInteraccion || 'No calificado'}</p>
+                <p><strong>Comentarios Trabajo Interacción:</strong> ${evaluacion.comentariosTrabajoInteraccion || 'Ninguno'}</p>
+                <p><strong>Trabajo Colaboración:</strong> ${evaluacion.trabajoColaboracion || 'No calificado'}</p>
+                <p><strong>Comentarios Trabajo Colaboración:</strong> ${evaluacion.comentariosTrabajoColaboracion || 'Ninguno'}</p>
+                <p><strong>Comentarios Generales:</strong> ${evaluacion.comentariosGenerales || 'Ninguno'}</p>
+                <p><strong>Sugerencias:</strong> ${evaluacion.sugerencias || 'Ninguna'}</p>
+                <p><strong>Recomendación:</strong> ${evaluacion.recomendacion || 'No especificada'}</p>
+                <p><strong>Justificación:</strong> ${evaluacion.justificacion || 'Ninguna'}</p>
+                <p><strong>Nombre Evaluador:</strong> ${evaluacion.nombreEvaluador}</p>
+                <p><strong>Rol Evaluador:</strong> ${evaluacion.rolEvaluador}</p>
+                <hr>
+            `;
+            evaluacionesDiv.appendChild(evaluacionDiv);
+        });
+    }
+        </script>
+    </form>
+</body>
+</html>
